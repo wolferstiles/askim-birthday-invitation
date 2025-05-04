@@ -1,11 +1,11 @@
 const questions = [
   {
-    question: "💫 Are you emotionally + spiritually prepared for Saturday?",
+    question: "<strong>💫 Are you emotionally + spiritually prepared for Saturday?</strong>",
     options: ["yes...", "uhmm... kinda?", "HELL JAAA EVETTTT 🔥"],
     correct: 2
   },
   {
-    question: "🧠 What's the scientifically perfect way to spend your Saturday?",
+    question: "<strong>🧠 What's the scientifically perfect way to spend your Saturday?</strong>",
     options: [
       "Sleeping till Monday zZzZz",
       "Practicing Turkish with Duolingo (hooot!)",
@@ -14,12 +14,12 @@ const questions = [
     correct: 2
   },
   {
-    question: "🍕 What’s better than White Lotus binge session?",
+    question: "<strong>🍕 What’s better than White Lotus binge session?</strong>",
     options: ["Netflix and... pasta?", "A me-date 😏", "A date with ME (with or without series)"],
     correct: 2
   },
   {
-    question: "🎁 What do you get when you mix love, mystery and perfect timing?",
+    question: "<strong>🎁 What do you get when you mix love, mystery and perfect timing?</strong>",
     options: [
       "Vodka Pasta 🍝",
       "A surprise mission from your fav human (me!)",
@@ -28,12 +28,12 @@ const questions = [
     correct: 1
   },
   {
-    question: "👀 Where should you absolutely NOT be Saturday afternoon?",
+    question: "<strong>👀 Where should you absolutely NOT be Saturday afternoon?</strong>",
     options: ["Doing Duolingo (again??)", "Fighting a goose 🪿", "Anywhere but with me 💔"],
     correct: 2
   },
   {
-    question: "💃 What’s the ONLY way to celebrate a birthday right?",
+    question: "<strong>💃 What’s the ONLY way to celebrate a birthday right?</strong>",
     options: [
       "With dance moves that are borderline crimes",
       "With someone who paints like Picasso (aka me 🧑‍🎨)",
@@ -42,12 +42,12 @@ const questions = [
     correct: 2
   },
   {
-    question: "🇩🇪 Liebst du mich?",
+    question: "<strong>🇩🇪 Liebst du mich?</strong>",
     options: ["Ich liebe dich, Schatz!", "I love u girl", "geçmiş olsunnnnn"],
     correct: 2
   },
   {
-    question: "💌 Final boss: Are you ready for the actual invitation?",
+    question: "<strong>💌 Final boss: Are you ready for the actual invitation?</strong>",
     options: ["Yes I’m SO READY", "I was born ready 🐣", "Wait... is this a trap??"],
     correct: "any"
   }
@@ -89,18 +89,17 @@ function checkAnswer(index) {
 
 function showFinalMessage() {
   container.innerHTML = `
-    <h2>🎉 Tebrikler, davetiyeye ulaşmaya hak kazandın! 🎉</h2>
-    <p>✨ İşte 10 Mayıs planı schatzım ✨</p>
+    <h2>🎉 Congrats, you’ve earned the invite! 🎉</h2>
+    <p>✨ Here’s the super exclusive 10th of May plan, my love! ✨</p>
     <ul style="text-align: left; margin-top: 20px;">
-      <li><strong>11:30</strong> – Meet with Beril at <strong>Treptower Park</strong>'. (she will send the exact location)</li>
-      <li><strong>16:30</strong> – Watching <strong>Konklave</strong> at Cinema! (Movie is in German, you gonna enjoy it alone but no worries, show must go on!)</li>
-      <li><strong>19:00</strong> – Romantic Dinner at Beril's House 🍽️</li>
-      <li><strong>21:00</strong> – Something you love... 😈💋</li>
+      <li><strong>11:30 AM</strong> – Meet Beril at <strong>Treptower Park</strong> (she’ll send you the exact location).</li>
+      <li><strong>4:30 PM</strong> – Watch <strong>Konklave</strong> at the cinema!! (It's in German, don't worry – you'll watch it solo... but it’s not even over yet!!) 🎬</li>
+      <li><strong>7:00 PM</strong> – Have a lovely dinner at Beril’s home 🍽️ (come straight from the movie).</li>
+      <li><strong>9:00 PM</strong> – Something you love... 😈💋</li>
     </ul>
-    <p>💕 Dress cute. Be hungry. Expect chaos. I got you. 💕</p>
+    <p>💕 Dress sharp. Bring your appetite. Expect chaos. I’ve got you covered. 💕</p>
   `;
   message.innerHTML = "";
 }
 
 showQuestion();
-
