@@ -8,14 +8,14 @@ const questions = [
     question: "<strong>🧠 What's the scientifically perfect way to spend your Saturday?</strong>",
     options: [
       "Sleeping till Monday zZzZz",
-      "Practicing Turkish with Duolingo (hooot!)",
+      "Practicing Turkish in Library",
       "Chilling with a suspiciously amazing person (hint: ME 😎)"
     ],
-    correct: 2
+    correct: 1
   },
   {
     question: "<strong>🍕 What’s better than White Lotus binge session?</strong>",
-    options: ["Netflix and... pasta?", "A me-date 😏", "A date with ME (with or without series)"],
+    options: ["Netflix and... vodka pasta?", "A me-date 😏", "A date with ME (with or without series)"],
     correct: 2
   },
   {
@@ -35,11 +35,11 @@ const questions = [
   {
     question: "<strong>💃 What’s the ONLY way to celebrate a birthday right?</strong>",
     options: [
-      "With dance moves that are borderline crimes",
+      "With twerking or dance laps on beril",
       "With someone who paints like Picasso (aka me 🧑‍🎨)",
-      "Both, obviously. DUH"
+      "Both, obviously. NOKTA"
     ],
-    correct: 2
+    correct: 0
   },
   {
     question: "<strong>🇩🇪 Liebst du mich?</strong>",
