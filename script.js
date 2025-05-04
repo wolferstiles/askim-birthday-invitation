@@ -54,6 +54,7 @@ const container = document.getElementById("question-container");
 const message = document.getElementById("message");
 
 function showQuestion() {
+document.getElementById("title").style.display = "none";
   const q = questions[current];
   container.innerHTML = `<h2>${q.question}</h2>`;
   q.options.forEach((opt, idx) => {
