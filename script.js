@@ -95,7 +95,7 @@ function showFinalMessage() {
       <li><strong>11:30 AM</strong> – Meet Beril at <strong>Treptower Park</strong> (she’ll send you the exact location).</li>
       <li><strong>4:30 PM</strong> – Watch <strong>Konklave</strong> at the cinema!! (It’s in German, but don’t worry, you’ll watch it solo... but it’s not even over yet!) 🎬</li>
       <li><strong>7:00 PM</strong> – Have a lovely dinner at Beril’s home 🍽️ (come straight from the movie).</li>
-      <li><strong>9:00 PM</strong> – Something you love... 😈💋</li>
+      <li><strong>9:00 PM</strong> – Something you love... glukglukglukglukgluk 😈💋</li>
     </ul>
     <p>💕 Dress sharp. Bring your appetite. Expect chaos. I’ve got you covered. 💕</p>
   `;
