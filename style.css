@@ -16,7 +16,7 @@ body {
 
 /* Başlık animasyonu */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 40px;
   animation: fadeOut 4s ease forwards;
@@ -29,30 +29,33 @@ h1 {
 
 /* Soru kutusu */
 .question-container {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
   border: 2px solid #ffffff50;
   border-radius: 15px;
-  padding: 30px;
+  padding: 40px;
   margin-bottom: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 /* Soru yazısı */
 .question {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 /* Şık butonlar */
 .options button {
   display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  font-size: 1.1rem;
+  width: 80%;
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 15px;
+  font-size: 1.3rem;
   font-weight: bold;
   background-color: #111;
   color: white;
@@ -94,10 +97,10 @@ h1 {
   }
 
   .question {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .options button {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
