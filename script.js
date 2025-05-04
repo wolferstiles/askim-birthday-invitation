@@ -35,7 +35,7 @@ const questions = [
   {
     question: "<strong>💃 What’s the ONLY way to celebrate a birthday right?</strong>",
     options: [
-      ">strong>Twearking and lap dancing to Beril",
+      "<strong>Twearking and lap dancing to Beril",
       "<strong>With someone who paints like Picasso (aka me 🧑‍🎨)</strong>",
       "<strong>Both, obviously. DUH"
     ],
