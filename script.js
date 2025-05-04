@@ -8,24 +8,24 @@ const questions = [
     question: "<strong>🧠 What's the scientifically perfect way to spend your Saturday?</strong>",
     options: [
       "Sleeping till Monday zZzZz",
-      "Practicing Turkish in Library",
+      "Going to Library and Studying Turkish bcz I need to be PRO",
       "<strong>Chilling with a suspiciously amazing person (hint: ME 😎)</strong>"
     ],
     correct: 1
   },
   {
     question: "<strong>🍕 What’s better than White Lotus binge session?</strong>",
-    options: ["<strong>Netflix and... yoguth pasta?", "<strong>A me-date 😏</strong>", "<strong>A date with ME (with or without series)</strong>"],
-    correct: 2
+    options: ["<strong>Netflix and... yogurth pasta?", "<strong>A me-date 😏</strong>", "<strong>A date with ME (with or without series)</strong>"],
+    correct: 1
   },
   {
     question: "<strong>🎁 What do you get when you mix love, mystery and perfect timing?</strong>",
     options: [
       "<strong>Vodka Pasta 🍝",
       "<strong>A surprise mission from your fav human (me!)</strong>",
-      "<strong>Confused calendar management"
+      "<strong>Making Juno positions"
     ],
-    correct: 0
+    correct: 1
   },
   {
     question: "<strong>👀 Where should you absolutely NOT be Saturday afternoon?</strong>",
@@ -37,9 +37,9 @@ const questions = [
     options: [
       "<strong>Twearking and lap dancing to Beril",
       "<strong>With someone who paints like Picasso (aka me 🧑‍🎨)</strong>",
-      "<strong>Both, obviously. DUH"
+      "<strong>Both, obviously. NOKTA"
     ],
-    correct: 0
+    correct: 2
   },
   {
     question: "<strong>🇩🇪 Liebst du mich?</strong>",
