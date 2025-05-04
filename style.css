@@ -1,48 +1,35 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-image: url('https://example.com/starry-background.jpg'); /* Yıldızlı arkaplan için URL'yi buraya ekle */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    margin: 10px;
-    font-size: 24px;
+  max-width: 600px;
+  padding: 20px;
+  text-align: center;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 20px;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
 }
 
 button:hover {
