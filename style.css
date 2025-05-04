@@ -1,86 +1,64 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
   background-color: black;
-  background-image: radial-gradient(white 1px, transparent 1px), radial-gradient(white 1px, transparent 1px);
-  background-position: 0 0, 25px 25px;
-  background-size: 50px 50px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('https://media.giphy.com/media/3o6gE5rITgS0s1nHJe/giphy.gif') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
 }
 
-.container {
-  max-width: 700px;
-  padding: 20px;
-  text-align: center;
-  z-index: 2;
+h1 {
+  font-size: 2.5em;
+  color: #FFD700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 button {
   background-color: transparent;
-  border: 2px solid white;
   color: white;
+  border: 2px solid #FFD700;
   padding: 10px 20px;
-  margin: 10px;
+  font-size: 1.2em;
+  margin: 15px;
   cursor: pointer;
   border-radius: 10px;
-  transition: 0.3s;
-  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: white;
+  background-color: #FFD700;
   color: black;
 }
 
 #message {
-  margin-top: 30px;
-  font-size: 18px;
-  color: hotpink;
+  font-size: 1.2em;
+  color: #FF6347;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
-/* GIF'ler */
-.corner-gif {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 150px;
-  opacity: 0.8;
-  z-index: 0;
+#darth-vader {
+  margin: 20px 0;
 }
 
-.corner-gif.left {
-  left: 10px;
-  right: auto;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Marvel Karakterleri Geçiş */
-.marvel-strip {
-  position: fixed;
-  top: 0;
-  left: 100%;
-  display: flex;
-  gap: 20px;
-  animation: slideLeft 40s linear infinite;
-  z-index: 1;
-  opacity: 0.5;
+ul li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
 }
 
-.marvel-strip img {
-  height: 100px;
-  border-radius: 10px;
-}
-
-@keyframes slideLeft {
-  from {
-    left: 100%;
-  }
-  to {
-    left: -100%;
-  }
+strong {
+  font-weight: bold;
 }
