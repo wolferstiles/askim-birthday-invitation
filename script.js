@@ -16,7 +16,7 @@ const questions = [
   {
     question: "<strong>🍕 What’s better than White Lotus binge session?</strong>",
     options: ["<strong>Netflix and... yogurth pasta?", "<strong>A me-date 😏</strong>", "<strong>A date with ME (with or without series)</strong>"],
-    correct: 1
+    correct: 0
   },
   {
     question: "<strong>🎁 What do you get when you mix love, mystery and perfect timing?</strong>",
