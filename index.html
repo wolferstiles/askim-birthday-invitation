@@ -7,23 +7,143 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="stars"></div>
-<div class="stars2"></div>
-<div class="stars3"></div>
-  <div id="title">
-    <h1><strong>Askim's Birthday Quiz</strong></h1>
-  </div>
 
-  <div id="darth-vader">
-    <img src="https://media.giphy.com/media/10rI5tT4owY7oY/giphy.gif" alt="Darth Vader GIF" width="300px">
-  </div>
+  <h1>💌 Askim's Birthday Quiz</h1>
 
-  <div id="question-container">
-    <!-- Questions will appear here -->
-  </div>
+  <div class="question-container" id="quiz"></div>
+  <div id="feedback"></div>
+  <div id="finalMessage"></div>
 
-  <div id="message"></div>
+  <script>
+    const questions = [
+      {
+        question: "🪐 Are you ready for Saturday?",
+        options: ["Yes", "Uhm... yes??", "HELL JAAA EVETTTT"],
+        correct: 2
+      },
+      {
+        question: "🧠 What is the scientifically proven best way to spend a Saturday?",
+        options: [
+          "Going library and studying Turkish bcz I need to be PRO",
+          "Sleeping until Monday",
+          "Hanging out with someone suspiciously amazing (a.k.a. me)"
+        ],
+        correct: 2
+      },
+      {
+        question: "🍕 What’s better than watching White Lotus on a Saturday?",
+        options: [
+          "A date with me (with or without series)",
+          "Having naughty time",
+          "Chill and have a duck time"
+        ],
+        correct: 0
+      },
+      {
+        question: "🎁 What do you get when you mix love, a bit of mystery, and good timing?",
+        options: [
+          "A surprise plan from your favorite person",
+          "A confusing time to choose date-place",
+          "A Vodka Pasta"
+        ],
+        correct: 0
+      },
+      {
+        question: "👀 Where should you absolutely not be at early afternoon on Saturday?",
+        options: [
+          "Doing Duolingo",
+          "Fighting a goose",
+          "Anywhere else but with me"
+        ],
+        correct: 2
+      },
+      {
+        question: "💃 How should one celebrate a birthday the right way?",
+        options: [
+          "Surrounded by glitter and questionable dance moves",
+          "With someone who paints better than Picasso (me, obviously)",
+          "All of the above"
+        ],
+        correct: 2
+      },
+      {
+        question: "❓Liebst du mich?",
+        options: [
+          "Ich liebe dich schatz!",
+          "I love u girl",
+          "Geçmiş olsun"
+        ],
+        correct: 2
+      },
+      {
+        question: "💌 Ready for your actual invitation? But first… choose wisely.",
+        options: [
+          "Yes, I’m ready!",
+          "I was born ready.",
+          "Is this a trap?"
+        ],
+        correct: 1
+      }
+    ];
 
-  <script src="script.js"></script>
+    let currentQuestion = 0;
+
+    function showQuestion() {
+      const quiz = document.getElementById("quiz");
+      const q = questions[currentQuestion];
+
+      quiz.innerHTML = `
+        <div class="question"><strong>${q.question}</strong></div>
+        <div class="options">
+          ${q.options.map((opt, i) => `
+            <button onclick="checkAnswer(${i})"><strong>${opt}</strong></button>
+          `).join("")}
+        </div>
+      `;
+
+      document.getElementById("feedback").innerText = "";
+    }
+
+    function checkAnswer(selected) {
+      const q = questions[currentQuestion];
+      if (selected === q.correct) {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          showQuestion();
+        } else {
+          showFinalMessage();
+        }
+      } else {
+        document.getElementById("feedback").innerText = "🫣 schaty you better try it agaiiinn!";
+      }
+    }
+
+    function showFinalMessage() {
+      document.getElementById("quiz").style.display = "none";
+      document.getElementById("feedback").style.display = "none";
+      document.getElementById("finalMessage").style.display = "block";
+      document.getElementById("finalMessage").innerHTML = `
+        🎉 <strong>Congratulations!</strong><br><br>
+        You unlocked the invitation to the big day 😍<br><br>
+
+        <strong>✨ May 10th Birthday Plan ✨</strong><br><br>
+
+        🕦 <strong>11:30</strong> – Meet Beril at <strong>Treptower Park</strong>.  
+        She'll send you the location!<br><br>
+
+        🎬 <strong>16:30</strong> – Watch <strong>Konklave</strong> at the cinema!  
+        (It's in German, so enjoy some solo language immersion 😅)<br><br>
+
+        🍽️ <strong>19:00</strong> – Delicious birthday dinner at Beril’s place.  
+        Head there right after the movie.<br><br>
+
+        😈 <strong>21:00</strong> – Something you love (guess what 😉)
+      `;
+    }
+
+    // Start the quiz
+    showQuestion();
+  </script>
+
 </body>
 </html>
