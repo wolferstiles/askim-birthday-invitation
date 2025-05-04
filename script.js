@@ -1,51 +1,54 @@
-document.getElementById("title").style.display = "none";
 const questions = [
   {
-    question: "💫 Are you ready for Saturday?",
-    options: ["Yes", "Uhm... yes??", "HELL JAAA EVETTTT"],
+    question: "💫 Are you emotionally + spiritually prepared for Saturday?",
+    options: ["yes...", "uhmm... kinda?", "HELL JAAA EVETTTT 🔥"],
     correct: 2
   },
   {
-    question: "🧠 What is the scientifically proven best way to spend a Saturday?",
+    question: "🧠 What's the scientifically perfect way to spend your Saturday?",
     options: [
-      "Going library and studying Turkish bcz I need to be PRO",
-      "Sleeping until Monday",
-      "Hanging out with someone suspiciously amazing (a.k.a. me)"
+      "Sleeping till Monday zZzZz",
+      "Practicing Turkish with Duolingo (hooot!)",
+      "Chilling with a suspiciously amazing person (hint: ME 😎)"
     ],
     correct: 2
   },
   {
-    question: "🍕 What’s better than watching White Lotus on a Saturday?",
-    options: ["A date with me (with or without series)", "having naughty time", "chill and have a duck time"],
-    correct: 0
-  },
-  {
-    question: "🎁 What do you get when you mix love, a bit of mystery, and good timing?",
-    options: ["A surprise plan from your favorite person", "A confusing time to choose date-place", "A Vodka Pasta"],
-    correct: 0
-  },
-  {
-    question: "👀 Where should you absolutely not be at early afternoon on Saturday?",
-    options: ["Doing Dualingo", "Fighting a goose", "Anywhere else but with me"],
+    question: "🍕 What’s better than White Lotus binge session?",
+    options: ["Netflix and... pasta?", "A me-date 😏", "A date with ME (with or without series)"],
     correct: 2
   },
   {
-    question: "💃 How should one celebrate a birthday the right way?",
+    question: "🎁 What do you get when you mix love, mystery and perfect timing?",
     options: [
-      "Surrounded by glitter and questionable dance moves",
-      "With someone who paints better than Picasso (me, obviously)",
-      "All of the above"
+      "Vodka Pasta 🍝",
+      "A surprise mission from your fav human (me!)",
+      "Confused calendar management"
+    ],
+    correct: 1
+  },
+  {
+    question: "👀 Where should you absolutely NOT be Saturday afternoon?",
+    options: ["Doing Duolingo (again??)", "Fighting a goose 🪿", "Anywhere but with me 💔"],
+    correct: 2
+  },
+  {
+    question: "💃 What’s the ONLY way to celebrate a birthday right?",
+    options: [
+      "With dance moves that are borderline crimes",
+      "With someone who paints like Picasso (aka me 🧑‍🎨)",
+      "Both, obviously. DUH"
     ],
     correct: 2
   },
   {
-    question: "Liebst du mich?",
-    options: ["Ich liebe dich schatz!", "i love u girl", "geçmiş olsun"],
+    question: "🇩🇪 Liebst du mich?",
+    options: ["Ich liebe dich, Schatz!", "I love u girl", "geçmiş olsunnnnn"],
     correct: 2
   },
   {
-    question: "💌 Ready for your actual invitation? But first… choose wisely.",
-    options: ["Yes, I’m ready!", "I was born ready.", "Is this a trap?"],
+    question: "💌 Final boss: Are you ready for the actual invitation?",
+    options: ["Yes I’m SO READY", "I was born ready 🐣", "Wait... is this a trap??"],
     correct: "any"
   }
 ];
@@ -55,7 +58,10 @@ const container = document.getElementById("question-container");
 const message = document.getElementById("message");
 
 function showQuestion() {
-document.getElementById("title").style.display = "none";
+  if (current === 0) {
+    document.getElementById("title").style.display = "none";
+  }
+
   const q = questions[current];
   container.innerHTML = `<h2>${q.question}</h2>`;
   q.options.forEach((opt, idx) => {
@@ -70,15 +76,31 @@ function checkAnswer(index) {
   const q = questions[current];
   if (q.correct === "any" || index === q.correct) {
     current++;
+    message.innerHTML = "";
     if (current < questions.length) {
       showQuestion();
     } else {
-      container.innerHTML = "<h2>🎉 You did it! See you Saturday... 💖</h2>";
-      message.innerHTML = "<p>✨ Dress nice. Expect fun. Be hungry. I got you. ✨</p>";
+      showFinalMessage();
     }
   } else {
-    alert("Oops! That's not quite it... Try again 🧐");
+    message.innerHTML = `💔 Schaty you better try it agaiiinn 😈`;
   }
 }
 
+function showFinalMessage() {
+  container.innerHTML = `
+    <h2>🎉 Tebrikler, davetiyeye ulaşmaya hak kazandın! 🎉</h2>
+    <p>✨ İşte 10 Mayıs planı schatzım ✨</p>
+    <ul style="text-align: left; margin-top: 20px;">
+      <li><strong>11:30</strong> – Meet with Beril at <strong>Treptower Park</strong>'. (she will send the exact location)</li>
+      <li><strong>16:30</strong> – Watching <strong>Konklave</strong> at Cinema! (Movie is in German, you gonna enjoy it alone but no worries, show must go on!)</li>
+      <li><strong>19:00</strong> – Romantic Dinner at Beril's House 🍽️</li>
+      <li><strong>21:00</strong> – Something you love... 😈💋</li>
+    </ul>
+    <p>💕 Dress cute. Be hungry. Expect chaos. I got you. 💕</p>
+  `;
+  message.innerHTML = "";
+}
+
 showQuestion();
+
