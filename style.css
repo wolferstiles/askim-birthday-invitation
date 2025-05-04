@@ -1,64 +1,40 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: black;
   color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: url('https://media.giphy.com/media/3o6gE5rITgS0s1nHJe/giphy.gif') no-repeat center center fixed;
-  background-size: cover;
-  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
 }
 
-h1 {
-  font-size: 2.5em;
-  color: #FFD700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  margin-bottom: 30px;
+#stars, #stars2, #stars3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
 }
 
-h2 {
-  font-size: 1.8em;
-  font-weight: bold;
+#stars {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star1.png') repeat;
+  animation: moveStars 100s linear infinite;
+  opacity: 0.8;
 }
 
-button {
-  background-color: transparent;
-  color: white;
-  border: 2px solid #FFD700;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  margin: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s ease;
+#stars2 {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star2.png') repeat;
+  animation: moveStars 200s linear infinite;
+  opacity: 0.5;
 }
 
-button:hover {
-  background-color: #FFD700;
-  color: black;
+#stars3 {
+  background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star3.png') repeat;
+  animation: moveStars 300s linear infinite;
+  opacity: 0.3;
 }
 
-#message {
-  font-size: 1.2em;
-  color: #FF6347;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-#darth-vader {
-  margin: 20px 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  font-size: 1.2em;
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-strong {
-  font-weight: bold;
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
 }
