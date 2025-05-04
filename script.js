@@ -1,3 +1,4 @@
+document.getElementById("title").style.display = "none";
 const questions = [
   {
     question: "💫 Are you ready for Saturday?",
